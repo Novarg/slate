@@ -1,0 +1,62 @@
+@import 'variables';
+
+%toc-font {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.toc-wrapper {
+  border-right: 1px solid #e9e9e9;
+  font-weight: normal;
+
+  .logo {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  .toc-h1 {
+    @extend %toc-font;
+  }
+  .toc-h2 {
+    @extend %toc-font;
+  }
+  li {
+    line-height: 38px;
+  }
+}
+
+.content {
+  h1{
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+  }
+  h2 {
+    border-top: 1px solid #e9e9e9;
+  }
+}
+
+// added style for inline lang blocks
+
+.content pre[class$='--inline'], .content pre.plaintext {
+  // position: absolute;
+  float: left;
+  clear: none;
+  background-color: $examples-bg;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-left: 28px;
+  width: 47%;
+  .w {
+    background-color: $examples-bg;
+  }
+  .p {
+    color: #fff;
+  }
+  .s2 {
+    color: #a6e22e;
+  }
+  .mi {
+    color: #f6574d;
+  }
+}
